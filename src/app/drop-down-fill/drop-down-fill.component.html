@@ -1,0 +1,6 @@
+<label for="client">Select Clients:</label>
+<select id="fillclient" class="form-control">
+  <option *ngFor="let client of clients" [value]="client.id">
+    {{ client.cname }}
+  </option>
+</select>

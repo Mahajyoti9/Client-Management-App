@@ -1,0 +1,47 @@
+<!--Navbar-->
+<app-navbar></app-navbar><!--navbar-->  
+<!--Form Code-->
+<div class="container">
+    <h2>Schedule a Meeting</h2>
+    <p>Please fill the details to schedule a Meeting</p>
+    <form [formGroup]="scheduleMeeting" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <!--<app-drop-down-fill name="cname"></app-drop-down-fill>-->
+            <label for="client">Select Clients:</label>
+            <select id="fillclient" class="form-control" name="cname" formControlName="cid"
+            (change)="onClientChange($event)">
+            <option *ngFor="let client of clients" [value]="client.id">
+                {{ client.cname }}
+            </option>
+            </select>
+        </div>
+        <div class="form-group"> 
+            <label>Date:</label>
+            <input type="date" class="form-control" name="date" placeholder="Enter Date" 
+            formControlName="date" required>
+            <div *ngIf="scheduleMeeting.get('date')?.touched && scheduleMeeting.get('date')?.invalid" class="text-danger">
+                <small *ngIf="scheduleMeeting.get('date')?.errors?.['required']">Date is required.</small>
+                <small *ngIf="scheduleMeeting.get('date')?.errors?.['pastDate']">Date cannot be in the past.</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Time:</label>
+            <input type="time" class="form-control" name="time" placeholder="Enter Time" 
+            formControlName="time" required>
+            <div *ngIf="scheduleMeeting.get('time')?.touched && scheduleMeeting.get('time')?.invalid" class="text-danger">
+                <small *ngIf="scheduleMeeting.get('time')?.errors?.['required']">Time is required.</small>
+                <small *ngIf="scheduleMeeting.get('time')?.errors?.['outsideBusinessHours']">Time should be in business hours.</small>
+            </div>
+        </div>
+        <div class="form-group"> 
+            <label>Purpose:</label>
+            <input type="text" class="form-control" name="purpose" placeholder="Enter Purpose" 
+            formControlName="purpose" required>
+            <div *ngIf="scheduleMeeting.get('purpose')?.touched && scheduleMeeting.get('purpose')?.invalid" class="text-danger">
+                <small>Purpose is required</small>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            {{ isEditMode ? 'Update Meeting' : 'Save Meeting' }}</button>
+    </form>
+</div>

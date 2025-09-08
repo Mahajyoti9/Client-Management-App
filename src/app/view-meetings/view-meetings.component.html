@@ -1,0 +1,30 @@
+<!--Navbar-->
+<app-navbar></app-navbar><!--navbar-->  
+<!--Form Code-->
+<!--Http Service-->
+<div class="container">
+    <h2>View Scheduled Meetings</h2>
+    <table class="table  table-bordered table-striped table-dark">
+        <thead>
+            <tr>
+                <th>Client</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Purpose</th>
+                <th>Edit/Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of schMeetings">
+                <td>{{s.cname}}</td>
+                <td>{{s.date}}</td>
+                <td>{{s.time}}</td>
+                <td>{{s.purpose}}</td>
+                <td>
+                    <button class="btn btn-primary me-2" (click)="editMeeting(s.id)">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteMeeting(s.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

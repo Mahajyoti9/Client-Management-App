@@ -1,0 +1,28 @@
+<!--Navbar-->
+<app-navbar></app-navbar><!--navbar-->  
+<!--Form Code-->
+<!--Http Service-->
+<div class="container">
+    <h2>View Clients</h2>
+    <table class="table  table-bordered table-striped table-dark">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Edit/Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of clients">
+                <td>{{c.cname}}</td>
+                <td>{{c.address}}</td>
+                <td>{{c.email}}</td>
+                <td>
+                    <button class="btn btn-primary me-2" (click)="editClient(c.id)">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteClient(c.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

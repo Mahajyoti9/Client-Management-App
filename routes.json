@@ -1,0 +1,4 @@
+{
+    "/clients": "/client_db.json",
+    "/scheduleMeeting": "/scheduleMeeting_db.json"
+}

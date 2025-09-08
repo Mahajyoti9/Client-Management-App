@@ -1,0 +1,77 @@
+{
+  "client": [
+    {
+      "id": "6ef5",
+      "cname": "Aadi Jonathan",
+      "email": "aadi@john",
+      "address": "bowen",
+      "pass": "aadiaadiaadi",
+      "rpass": "aadiaadiaadi",
+      "status": "inactive"
+    },
+    {
+      "cname": "Mahadipti",
+      "email": "xyz@abc",
+      "address": "aaa",
+      "pass": "bbbbbbbb",
+      "rpass": "bbbbbbbb",
+      "id": "8453",
+      "status": "active"
+    },
+    {
+      "id": "cbb3",
+      "cname": "Mahajyoti Mohanty",
+      "email": "xyz@abc.com",
+      "address": "aaa",
+      "pass": "abcdefgh",
+      "rpass": "abcdefgh",
+      "status": "active"
+    }
+  ],
+  "scheduleMeeting": [
+    {
+      "cid": "6ef5",
+      "cname": "Aadi Jonathan",
+      "date": "2025-06-27",
+      "time": "13:10",
+      "purpose": "requirement gathering",
+      "id": "6626",
+      "status": "inactive"
+    },
+    {
+      "cid": "8453",
+      "cname": "Mahadipti",
+      "date": "2025-06-21",
+      "time": "12:16",
+      "purpose": "testing",
+      "id": "bb54",
+      "status": "inactive"
+    },
+    {
+      "id": "2f0f",
+      "cid": "cbb3",
+      "cname": "Mahajyoti Mohanty",
+      "date": "2025-07-10",
+      "time": "13:04",
+      "purpose": "requirement gathering"
+    },
+    {
+      "cid": "8453",
+      "cname": "Mahadipti",
+      "date": "2025-07-10",
+      "time": "13:14",
+      "purpose": "requirement gathering",
+      "status": "inactive",
+      "id": "c8b1"
+    },
+    {
+      "id": "fd1b",
+      "cid": "cbb3",
+      "cname": "Mahajyoti Mohanty",
+      "date": "2025-07-03",
+      "time": "16:25",
+      "purpose": "testing",
+      "status": "active"
+    }
+  ]
+}
