@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ClientManage
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# Client-Management-App
+Client can manage their meetings , they can schedule and see the meetings that they have already planned
+>>>>>>> 6c789613ab708634bd7e46710611c140fa0c6f4e
